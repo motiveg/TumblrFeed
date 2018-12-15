@@ -4,7 +4,7 @@
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough:
 
 <img src='https://github.com/motiveg/TumblrFeed/raw/master/TumblrFeedDemo1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
