@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TumblrFeed-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="TumblrFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="215" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-ux-sFw">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="215" id="r8y-5G-KG1" customClass="PhotoCell" customModule="TumblrFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="215"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r8y-5G-KG1" id="2gg-uk-nFJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="214.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FiJ-Xi-sJz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="214.5"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="FiJ-Xi-sJz" secondAttribute="bottom" id="E7w-nb-Ce3"/>
+                                                <constraint firstItem="FiJ-Xi-sJz" firstAttribute="top" secondItem="2gg-uk-nFJ" secondAttribute="top" id="Kus-jX-tmU"/>
+                                                <constraint firstAttribute="trailing" secondItem="FiJ-Xi-sJz" secondAttribute="trailing" id="R9a-ML-TZJ"/>
+                                                <constraint firstItem="FiJ-Xi-sJz" firstAttribute="leading" secondItem="2gg-uk-nFJ" secondAttribute="leading" id="WHe-ta-QnO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="photoCellImageView" destination="FiJ-Xi-sJz" id="Uio-5F-BpY"/>
+                                            <segue destination="UeN-Nh-168" kind="show" identifier="PhotoDetailsSegue" id="Jek-0Q-zHO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eqf-ux-sFw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9qw-tJ-pcV"/>
+                            <constraint firstItem="Eqf-ux-sFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lrm-8t-CO7"/>
+                            <constraint firstItem="Eqf-ux-sFw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PNa-kA-nN4"/>
+                            <constraint firstItem="Eqf-ux-sFw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qQ3-0R-dlq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TumblrFeed" id="9r6-Of-ce7">
+                        <barButtonItem key="backBarButtonItem" title=" " id="QpZ-FV-90j">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Eqf-ux-sFw" id="Thc-pf-IXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.75" y="35.91549295774648"/>
+        </scene>
+        <!--PhotoDetails-->
+        <scene sceneID="45X-9n-TXs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoDetails" id="UeN-Nh-168" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzJ-4I-k6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.75" y="35.91549295774648"/>
+        </scene>
+    </scenes>
+</document>

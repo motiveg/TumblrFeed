@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u4W-Ns-DXa">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Details View Controller-->
+        <scene sceneID="cAA-Hd-DW0">
+            <objects>
+                <viewController id="u4W-Ns-DXa" customClass="PhotoDetailsViewController" customModule="TumblrFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hZu-cG-KdV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="476" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P63-cZ-oR5">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoDetailCell" rowHeight="476" id="0UC-M6-FmC" customClass="PhotoDetailCell" customModule="TumblrFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="476"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0UC-M6-FmC" id="81Y-bF-4f3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z12-xw-Skt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="210" id="bVt-Jf-lv9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-12-15 01:52:06 GMT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZY-yE-toq">
+                                                    <rect key="frame" x="10" y="220" width="183" height="17"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-ys-eUX">
+                                                    <rect key="frame" x="10" y="247" width="300" height="219"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <mutableString key="text">I just finished medical school.  Now I’m heading to residency, which is supposed to be even tougher.  I’ve been working sixteen-hour days.  Then I’m expected to study every night when I get home.  Some of my classmates only sleep three hours per night.  I tried that for a few months during my surgery rotation, but I ended up getting really depressed.  I felt completely depersonalized.  Everything seemed like a dream.  To make matters worse, a lot of the instructors are jerks.  I think they went through hell when they were students, so they feel like they should put us through hell.  On the first day of rotations, my attending physician told me: ‘I’m an asshole, but I’ll make you a better doctor.’  He made fun of me in front of other students.  He put me down in front of patients.  He’d threaten to kick me out every day.  I guess they’re trying to weed people out and make strong doctors.  But they’re just traumatizing people.  They’re making us apathetic.  I got into medicine because I really wanted to make a difference in people’s lives.  But after going through hell, I just don’t care anymore.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IZY-yE-toq" secondAttribute="trailing" constant="10" id="7Tf-nN-New"/>
+                                                <constraint firstItem="z12-xw-Skt" firstAttribute="leading" secondItem="81Y-bF-4f3" secondAttribute="leading" id="8aq-Ua-Lmi"/>
+                                                <constraint firstItem="JSl-ys-eUX" firstAttribute="top" secondItem="IZY-yE-toq" secondAttribute="bottom" constant="10" id="DUo-vD-1pl"/>
+                                                <constraint firstAttribute="trailing" secondItem="JSl-ys-eUX" secondAttribute="trailing" constant="10" id="Ivu-S6-4Ex"/>
+                                                <constraint firstItem="IZY-yE-toq" firstAttribute="leading" secondItem="81Y-bF-4f3" secondAttribute="leading" constant="10" id="cxN-he-l6P"/>
+                                                <constraint firstItem="z12-xw-Skt" firstAttribute="top" secondItem="81Y-bF-4f3" secondAttribute="top" id="j2p-Kv-m04"/>
+                                                <constraint firstAttribute="trailing" secondItem="z12-xw-Skt" secondAttribute="trailing" id="klT-Zd-Ty4"/>
+                                                <constraint firstItem="JSl-ys-eUX" firstAttribute="leading" secondItem="81Y-bF-4f3" secondAttribute="leading" constant="10" id="stN-jr-A2F"/>
+                                                <constraint firstAttribute="bottom" secondItem="JSl-ys-eUX" secondAttribute="bottom" constant="10" id="tLb-pO-CBd"/>
+                                                <constraint firstItem="IZY-yE-toq" firstAttribute="top" secondItem="z12-xw-Skt" secondAttribute="bottom" constant="10" id="wJ1-My-olK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="captionTextView" destination="JSl-ys-eUX" id="EIc-dy-j2A"/>
+                                            <outlet property="dateLabel" destination="IZY-yE-toq" id="xMU-Nz-UDb"/>
+                                            <outlet property="photoDetailImageView" destination="z12-xw-Skt" id="IJm-y6-8oA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mFh-CO-rR7" firstAttribute="trailing" secondItem="P63-cZ-oR5" secondAttribute="trailing" id="beV-pl-wlE"/>
+                            <constraint firstItem="mFh-CO-rR7" firstAttribute="bottom" secondItem="P63-cZ-oR5" secondAttribute="bottom" id="hKb-3S-uBS"/>
+                            <constraint firstItem="P63-cZ-oR5" firstAttribute="top" secondItem="mFh-CO-rR7" secondAttribute="top" id="rvP-1I-YBP"/>
+                            <constraint firstItem="P63-cZ-oR5" firstAttribute="leading" secondItem="mFh-CO-rR7" secondAttribute="leading" id="wuh-2o-J4x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mFh-CO-rR7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Atr-HZ-ldX"/>
+                    <connections>
+                        <outlet property="tableView" destination="P63-cZ-oR5" id="fAI-Us-tq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayY-4d-vfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.75" y="35.91549295774648"/>
+        </scene>
+    </scenes>
+</document>
