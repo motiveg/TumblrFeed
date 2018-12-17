@@ -113,7 +113,6 @@ extension PhotosViewController: UITableViewDataSource {
         return 50
     }
     
-    // TODO: add the date for each post's header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         headerView.backgroundColor = UIColor(white: 1, alpha: 0.9)
@@ -128,9 +127,11 @@ extension PhotosViewController: UITableViewDataSource {
         profileView.af_setImage(withURL: URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/avatar")!)
         headerView.addSubview(profileView)
         
-        // Add a UILabel for the date here
-        // Use the section number to get the right URL
-        // let label = ...
+        // Add a uilabel for the date
+        let dateLabel = UILabel(frame: CGRect(x: 50, y: 10, width: 260, height: 30))
+        dateLabel.font = UIFont.boldSystemFont(ofSize: 14.0)
+        dateLabel.text = TumblrPost.convertTimeZone(dateTime: tumblrPosts[section].date!)
+        headerView.addSubview(dateLabel)
         
         return headerView
     }

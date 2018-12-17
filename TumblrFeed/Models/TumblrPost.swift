@@ -10,10 +10,8 @@ import Foundation
 
 class TumblrPost {
     
-    // TODO
-    // - create properties for tumblr posts from api
-    
     let id: Int?
+    let title: String?
     let post_url: String?
     let date: String?
     let summary: String?
@@ -29,6 +27,13 @@ class TumblrPost {
         ]
         
         id = dictionary["id"] as? Int ?? -1
+        if let blog = dictionary["blog"] as? [String: Any] {
+            title = blog["title"] as? String
+        } else {
+            title = ""
+        }
+        
+        
         post_url = dictionary["post_url"] as? String ?? ""
         date = dictionary["date"] as? String ?? ""
         summary = dictionary["summary"] as? String ?? ""
@@ -61,6 +66,27 @@ class TumblrPost {
             tumblrPosts.append(tumblrPost)
         }
         return tumblrPosts
+    }
+    
+    class func convertTimeZone(dateTime: String) -> String {
+        
+        let getFormatter = DateFormatter()
+        let formatter = DateFormatter()
+        
+        // Configure the input + output format to parse the date string
+        getFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        getFormatter.timeZone = TimeZone(abbreviation: "EST")
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        formatter.timeZone = TimeZone(abbreviation: "EST")
+        
+        // Configure output format
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        
+        let date = getFormatter.date(from: dateTime)
+        let formattedDate = formatter.string(from: date!) + " EST"
+        
+        return formattedDate
     }
     
 }

@@ -20,9 +20,10 @@ class PhotoDetailsViewController: UIViewController {
         
         tableView.dataSource = self
         
+        self.navigationItem.title = tumblrPost?.title
         // TODO: set table view (and cell) to height of display height
+        // OBJECTIVE: dynamically set the view height depending on the display
     }
-
     
 }
 
