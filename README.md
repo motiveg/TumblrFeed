@@ -6,7 +6,7 @@
 
 Here's a walkthrough:
 
-<img src='https://github.com/motiveg/TumblrFeed/raw/master/TumblrFeedDemo1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/motiveg/TumblrFeed/raw/master/TumblrFeedDemo3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
